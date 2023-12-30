@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+  <h1>CALCULATOR</h1>
+
+  <div id="calculator">
+    <form name="calcForm">
+      <input type="text" id="display" name="display" readonly>
+      <br>
+      <input type="button" value="(" onclick="calcForm.display.value += '('">
+      <input type="button" value=")" onclick="calcForm.display.value += ')'">
+      <input type="button" value="<" onclick="clearLastDigit()">
+      <input type="button" value="C" onclick="clearDisplay()" class="red">
+      <br>
+      <input type="button" value="1" onclick="calcForm.display.value += '1'">
+      <input type="button" value="2" onclick="calcForm.display.value += '2'">
+      <input type="button" value="3" onclick="calcForm.display.value += '3'">
+      <input type="button" value="-" onclick="calcForm.display.value += '-'">
+      <br>
+      <input type="button" value="4" onclick="calcForm.display.value += '4'">
+      <input type="button" value="5" onclick="calcForm.display.value += '5'">
+      <input type="button" value="6" onclick="calcForm.display.value += '6'">
+      <input type="button" value="*" onclick="calcForm.display.value += '*'">
+      <br>
+      <input type="button" value="7" onclick="calcForm.display.value += '7'">
+      <input type="button" value="8" onclick="calcForm.display.value += '8'">
+      <input type="button" value="9" onclick="calcForm.display.value += '9'">
+      <input type="button" value="/" onclick="calcForm.display.value += '/'">
+      <br>
+      <input type="button" value="." onclick="calcForm.display.value += '.'">
+      <input type="button" value="0" onclick="calcForm.display.value += '0'">
+      <input type="button" value="=" onclick="calcForm.display.value = eval(calcForm.display.value)">
+      <input type="button" value="+" onclick="calcForm.display.value += '+'">
+    </form>
+    <div class='conatiner'>
+      <h1>log in:</h1>
+      <div class='center'>
+        <input type="text" class="password" name="username" value="username">
+        <div class='image'>
+          <span class='ab'><i class="fa fa-eye"></i></span>
+          <input class='password' size='5' name='text' type='password' value="password"/>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
